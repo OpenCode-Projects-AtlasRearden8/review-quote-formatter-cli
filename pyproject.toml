@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "review-quote-formatter"
+version = "1.0.0"
+description = "Turn pasted book reviews into honest, attributed pull quotes, quote sheets, social cards, and retail blurbs. Offline, local-first."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Asdale Dynamics, LLC" }]
+keywords = ["reviews", "quotes", "book-marketing", "publishing", "cli"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: General",
+]
+
+[project.scripts]
+reviewquote = "review_quote_formatter.cli:main"
+
+[project.urls]
+Homepage = "https://dylanasdale.github.io"
+
+[tool.setuptools]
+packages = ["review_quote_formatter"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
